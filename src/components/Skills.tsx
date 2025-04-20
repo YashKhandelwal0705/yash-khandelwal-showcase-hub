@@ -1,4 +1,3 @@
-
 import { 
   FileCode2 as Python,
   FileCode as Java,
@@ -12,38 +11,10 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { 
-          name: "Python", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-            alt="Python" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        },
-        { 
-          name: "Java", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
-            alt="Java" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        },
-        { 
-          name: "C++", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
-            alt="C++" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        },
-        { 
-          name: "SQL", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-            alt="SQL" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        }
+        { name: "Python", icon: <Python className="w-5 h-5" /> },
+        { name: "Java", icon: <Java className="w-5 h-5" /> },
+        { name: "C++", icon: <span className="font-mono font-bold">C++</span> },
+        { name: "SQL", icon: <span className="font-mono">SQL</span> }
       ],
       bgColor: "bg-blue-50",
       iconColor: "text-blue-500"
@@ -53,30 +24,9 @@ const Skills = () => {
       skills: [
         { name: "Git", icon: <GitBranch className="w-5 h-5" /> },
         { name: "GitHub", icon: <Github className="w-5 h-5" /> },
-        { 
-          name: "Google Colab", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
-            alt="Google Colab" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        },
-        { 
-          name: "Jupyter", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
-            alt="Jupyter" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        },
-        { 
-          name: "Tableau", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-            alt="Tableau" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        }
+        { name: "Google Colab", icon: "GC" },
+        { name: "Jupyter", icon: "JP" },
+        { name: "Tableau", icon: "TB" }
       ],
       bgColor: "bg-purple-50",
       iconColor: "text-purple-500"
@@ -84,38 +34,10 @@ const Skills = () => {
     {
       title: "Libraries",
       skills: [
-        { 
-          name: "Pandas", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
-            alt="Pandas" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        },
-        { 
-          name: "NumPy", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
-            alt="NumPy" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        },
-        { 
-          name: "Matplotlib", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-            alt="Matplotlib" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        },
-        { 
-          name: "Seaborn", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
-            alt="Seaborn" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        }
+        { name: "Pandas", icon: "PD" },
+        { name: "NumPy", icon: "NP" },
+        { name: "Matplotlib", icon: "MP" },
+        { name: "Seaborn", icon: "SB" }
       ],
       bgColor: "bg-green-50",
       iconColor: "text-green-500"
@@ -124,22 +46,8 @@ const Skills = () => {
       title: "Soft Skills",
       skills: [
         { name: "Leadership", icon: <Users className="w-5 h-5" /> },
-        { 
-          name: "Problem Solving", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
-            alt="Problem Solving" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        },
-        { 
-          name: "Time Management", 
-          icon: <img 
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" 
-            alt="Time Management" 
-            className="w-12 h-12 object-cover rounded-full" 
-          /> 
-        }
+        { name: "Problem Solving", icon: "🎯" },
+        { name: "Time Management", icon: "⏰" }
       ],
       bgColor: "bg-orange-50",
       iconColor: "text-orange-500"
