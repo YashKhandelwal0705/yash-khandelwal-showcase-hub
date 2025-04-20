@@ -19,6 +19,11 @@ const Index = () => {
       <Education />
       <Achievements />
       <Contact />
+      <footer className="bg-gray-100 py-4 text-center">
+        <p className="text-sm text-gray-600">
+          © {new Date().getFullYear()} Yash Khandelwal. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 };
