@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, FileDown } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -15,28 +15,39 @@ const Hero = () => {
           <p className="text-gray-600 mb-8 max-w-lg">
             Computer Science Engineering student at Lovely Professional University, passionate about solving complex problems through data-driven solutions.
           </p>
-          <div className="flex justify-center md:justify-start space-x-6">
+          <div className="flex flex-col md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-6">
+            <div className="flex space-x-6">
+              <a
+                href="https://github.com/YashKhandelwal0705"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-indigo-600 transition-colors"
+              >
+                <Github className="h-8 w-8" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yash-khandelwal-"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-indigo-600 transition-colors"
+              >
+                <Linkedin className="h-8 w-8" />
+              </a>
+              <a
+                href="mailto:yashkhandelwal0705@gmail.com"
+                className="text-gray-600 hover:text-indigo-600 transition-colors"
+              >
+                <Mail className="h-8 w-8" />
+              </a>
+            </div>
             <a
-              href="https://github.com/YashKhandelwal0705"
+              href="https://drive.google.com/file/d/1kLqmqC8YQsHrxvPBdVxpVbxvfLHZI3Is/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
+              className="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
             >
-              <Github className="h-8 w-8" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/yash-khandelwal-"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
-            >
-              <Linkedin className="h-8 w-8" />
-            </a>
-            <a
-              href="mailto:yashkhandelwal0705@gmail.com"
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
-            >
-              <Mail className="h-8 w-8" />
+              <FileDown className="mr-2 h-5 w-5" />
+              Download CV
             </a>
           </div>
         </div>
@@ -53,3 +64,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
