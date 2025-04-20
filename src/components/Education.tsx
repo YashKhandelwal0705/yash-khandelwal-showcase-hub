@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 const Education = () => {
   const education = [
     {
@@ -6,18 +8,6 @@ const Education = () => {
       institution: "Lovely Professional University",
       period: "2022–2026",
       score: "CGPA: 8.1"
-    },
-    {
-      degree: "Intermediate",
-      institution: "New Look Sr. Secondary School",
-      period: "2022",
-      score: "75%"
-    },
-    {
-      degree: "Matriculation",
-      institution: "Emmanuel Mission School",
-      period: "2020",
-      score: "94.67%"
     }
   ];
 
