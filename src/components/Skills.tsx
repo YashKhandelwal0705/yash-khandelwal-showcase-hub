@@ -1,27 +1,55 @@
 
+import { 
+  Python, 
+  Java, 
+  Github, 
+  GitBranch,
+  Users
+} from "lucide-react";
+
 const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Python", "Java", "C++", "SQL"],
+      skills: [
+        { name: "Python", icon: <Python className="w-5 h-5" /> },
+        { name: "Java", icon: <Java className="w-5 h-5" /> },
+        { name: "C++", icon: <span className="font-mono font-bold">C++</span> },
+        { name: "SQL", icon: <span className="font-mono">SQL</span> }
+      ],
       bgColor: "bg-blue-50",
       iconColor: "text-blue-500"
     },
     {
       title: "Tools",
-      skills: ["Git", "GitHub", "Google Colab", "Jupyter", "Tableau"],
+      skills: [
+        { name: "Git", icon: <GitBranch className="w-5 h-5" /> },
+        { name: "GitHub", icon: <Github className="w-5 h-5" /> },
+        { name: "Google Colab", icon: "GC" },
+        { name: "Jupyter", icon: "JP" },
+        { name: "Tableau", icon: "TB" }
+      ],
       bgColor: "bg-purple-50",
       iconColor: "text-purple-500"
     },
     {
       title: "Libraries",
-      skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
+      skills: [
+        { name: "Pandas", icon: "PD" },
+        { name: "NumPy", icon: "NP" },
+        { name: "Matplotlib", icon: "MP" },
+        { name: "Seaborn", icon: "SB" }
+      ],
       bgColor: "bg-green-50",
       iconColor: "text-green-500"
     },
     {
       title: "Soft Skills",
-      skills: ["Leadership", "Problem Solving", "Time Management"],
+      skills: [
+        { name: "Leadership", icon: <Users className="w-5 h-5" /> },
+        { name: "Problem Solving", icon: "🎯" },
+        { name: "Time Management", icon: "⏰" }
+      ],
       bgColor: "bg-orange-50",
       iconColor: "text-orange-500"
     }
@@ -44,8 +72,10 @@ const Skills = () => {
                     key={skillIndex}
                     className="flex items-center bg-white rounded-lg p-2 shadow-sm"
                   >
-                    <span className={`mr-2 ${category.iconColor}`}>•</span>
-                    <span>{skill}</span>
+                    <span className={`mr-3 ${category.iconColor} flex items-center justify-center w-6 h-6`}>
+                      {skill.icon}
+                    </span>
+                    <span>{skill.name}</span>
                   </div>
                 ))}
               </div>
