@@ -1,7 +1,7 @@
 
 import { 
-  Python, 
-  Java, 
+  FileCode2 as Python,
+  FileCode as Java,
   Github, 
   GitBranch,
   Users
