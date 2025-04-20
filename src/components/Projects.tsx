@@ -1,11 +1,10 @@
-
 const Projects = () => {
   const projects = [
     {
       title: "House Price Prediction",
       description: "Implemented machine learning techniques including Logistic Regression, Decision Trees, and Random Forests with optimized hyperparameters. Built a complete ML pipeline for accurate house price predictions.",
       tags: ["Machine Learning", "Python", "Scikit-learn", "Data Analysis"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+      image: "/lovable-uploads/53920492-1217-4755-937a-2ee5f30b5272.png"
     },
     {
       title: "Heart Disease Data Visualization",
