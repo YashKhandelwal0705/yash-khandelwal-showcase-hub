@@ -25,7 +25,7 @@ const Contact = () => {
       const serviceId = 'service_bvpmfpd';
       const templateId = 'template_pfmmq2h';
       
-      // Format the message to include sender's information at the top
+      // Format the message to clearly display sender information
       const formattedMessage = `
 From: ${formData.name}
 Email: ${formData.email}
@@ -35,11 +35,14 @@ ${formData.message}
       `;
       
       // Send email using EmailJS
+      // We use a specific format for from_name to make it clear who the message is from
+      // reply_to is set to the sender's email to enable direct replies
       const templateParams = {
-        from_name: `${formData.name} via Portfolio Contact Form`,
+        from_name: `${formData.name} <${formData.email}>`,
         reply_to: formData.email,
         message: formattedMessage,
-        to_email: 'yashkhandelwal0705@gmail.com'
+        to_email: 'yashkhandelwal0705@gmail.com',
+        subject: `Portfolio Contact: ${formData.name}`
       };
       
       const response = await emailjs.send(serviceId, templateId, templateParams);
