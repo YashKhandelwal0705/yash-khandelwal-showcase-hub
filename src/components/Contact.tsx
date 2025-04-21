@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import emailjs from 'emailjs-com';
 
 // Initialize EmailJS
-emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS User ID
+emailjs.init("vhjY1WjLHYvPkoCcQ"); // Replace with your actual EmailJS User ID
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,8 +22,8 @@ const Contact = () => {
     
     try {
       // EmailJS service configuration
-      const serviceId = 'service_YOUR_SERVICE_ID'; // Replace with your actual service ID
-      const templateId = 'template_YOUR_TEMPLATE_ID'; // Replace with your actual template ID
+      const serviceId = 'service_bvpmfpd'; // Replace with your actual service ID
+      const templateId = 'template_pfmmq2h'; // Replace with your actual template ID
       
       const templateParams = {
         from_name: formData.name,
