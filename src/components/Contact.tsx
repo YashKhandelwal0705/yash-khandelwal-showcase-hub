@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { toast } from "@/components/ui/sonner";
+import { toast } from "sonner";
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -33,10 +33,7 @@ const Contact = () => {
       
       await emailjs.send(serviceId, templateId, templateParams, userId);
       
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
+      toast.success("Message sent! Thank you for your message. I'll get back to you soon.");
       
       // Reset form after successful submission
       setFormData({
@@ -46,11 +43,7 @@ const Contact = () => {
       });
     } catch (error) {
       console.error('Failed to send email:', error);
-      toast({
-        title: "Something went wrong",
-        description: "Failed to send your message. Please try again later.",
-        variant: "destructive"
-      });
+      toast.error("Something went wrong. Failed to send your message. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
