@@ -13,7 +13,7 @@ const Hero = () => {
             Aspiring Data Scientist & Machine Learning Engineer
           </p>
           <p className="text-gray-600 mb-8 max-w-lg">
-            Computer Science Engineering student at Lovely Professional University, passionate about solving complex problems through data-driven solutions.
+            I am a Computer Science Engineering student at Lovely Professional University, passionate about solving complex problems through data-driven solutions. With a keen interest in Data Science, Machine Learning, and Software Development, I enjoy tackling real-world challenges using Python, Java, SQL, and C++. My experience spans projects from predictive models to interactive dashboards, and I am actively preparing for roles as a Data Scientist, Machine Learning Engineer, or Software Development Engineer.
           </p>
           <div className="flex flex-col md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-6">
             <div className="flex space-x-6">
@@ -64,4 +64,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
