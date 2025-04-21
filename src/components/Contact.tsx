@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import emailjs from 'emailjs-com';
 
+// Initialize EmailJS
+emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS User ID
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -19,10 +22,8 @@ const Contact = () => {
     
     try {
       // EmailJS service configuration
-      // You need to replace these IDs with your own from EmailJS dashboard
-      const serviceId = 'service_YOUR_SERVICE_ID';
-      const templateId = 'template_YOUR_TEMPLATE_ID';
-      const userId = 'YOUR_USER_ID';
+      const serviceId = 'service_YOUR_SERVICE_ID'; // Replace with your actual service ID
+      const templateId = 'template_YOUR_TEMPLATE_ID'; // Replace with your actual template ID
       
       const templateParams = {
         from_name: formData.name,
@@ -31,7 +32,9 @@ const Contact = () => {
         to_email: 'yashkhandelwal0705@gmail.com'
       };
       
-      await emailjs.send(serviceId, templateId, templateParams, userId);
+      // Send email using EmailJS
+      const response = await emailjs.send(serviceId, templateId, templateParams);
+      console.log('Email sent successfully:', response);
       
       toast.success("Message sent! Thank you for your message. I'll get back to you soon.");
       
