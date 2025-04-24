@@ -12,6 +12,7 @@ const Certifications = () => {
       issuer: "GeeksforGeeks",
       date: "Jul 2024",
       color: "border-green-500",
+      link: "https://www.geeksforgeeks.org/certificate/42b0605e1a7058c9022956d3e0efc42f"
     },
     {
       title: "Cloud Computing",
