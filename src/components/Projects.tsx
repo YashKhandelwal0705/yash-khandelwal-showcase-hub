@@ -33,9 +33,9 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="group h-[500px] [perspective:1000px]"
+              className="group [perspective:1000px]"
             >
-              <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div className="relative w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 {/* Front of card */}
                 <div className="absolute inset-0 bg-white rounded-lg shadow-lg overflow-hidden">
                   <img 
@@ -60,7 +60,7 @@ const Projects = () => {
                 </div>
                 
                 {/* Back of card */}
-                <div className="absolute inset-0 h-full w-full rounded-lg bg-white px-6 py-8 shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <div className="absolute inset-0 rounded-lg bg-white px-6 py-8 shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
                   <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
                   <div className="space-y-4">
                     {project.detailedDescription.map((detail, detailIndex) => (
