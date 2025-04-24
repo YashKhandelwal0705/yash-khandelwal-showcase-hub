@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, FileDown } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-blue-50">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
           <h1 className="font-playfair text-4xl md:text-6xl font-bold text-gray-900 mb-4">
@@ -13,7 +13,7 @@ const Hero = () => {
             Aspiring Data Scientist & Machine Learning Engineer
           </p>
           <p className="text-gray-600 mb-8 max-w-lg">
-            I am a Computer Science Engineering student at Lovely Professional University, passionate about solving complex problems through data-driven solutions. With a keen interest in Data Science, Machine Learning, and Software Development, I enjoy tackling real-world challenges. My experience spans projects from predictive models to interactive dashboards, and I am actively preparing for roles as a Data Scientist, Machine Learning Engineer, or Software Development Engineer.
+            Passionate about leveraging data-driven solutions and machine learning to solve complex real-world problems. Currently pursuing Computer Science Engineering at Lovely Professional University.
           </p>
           <div className="flex flex-col md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-6">
             <div className="flex space-x-6">
