@@ -1,9 +1,9 @@
+
 import { 
   FileCode2 as Python,
   FileCode as Java,
   Github, 
   GitBranch,
-  Users
 } from "lucide-react";
 
 const Skills = () => {
@@ -41,16 +41,6 @@ const Skills = () => {
       ],
       bgColor: "bg-green-50",
       iconColor: "text-green-500"
-    },
-    {
-      title: "Soft Skills",
-      skills: [
-        { name: "Leadership", icon: <Users className="w-5 h-5" /> },
-        { name: "Problem Solving", icon: "🎯" },
-        { name: "Time Management", icon: "⏰" }
-      ],
-      bgColor: "bg-orange-50",
-      iconColor: "text-orange-500"
     }
   ];
 
@@ -58,7 +48,7 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-playfair font-bold text-center mb-12">Skills & Expertise</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <div 
               key={index}
@@ -87,3 +77,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
