@@ -1,4 +1,6 @@
 
+import { ExternalLink, Github } from 'lucide-react';
+
 const Projects = () => {
   const projects = [
     {
@@ -10,7 +12,8 @@ const Projects = () => {
         "Built an end-to-end pipeline for data preprocessing, model training, evaluation, and deployment, significantly reducing prediction error for real estate forecasting."
       ],
       tags: ["Machine Learning", "Python", "Scikit-learn", "Data Analysis"],
-      image: "/lovable-uploads/53920492-1217-4755-937a-2ee5f30b5272.png"
+      image: "/lovable-uploads/53920492-1217-4755-937a-2ee5f30b5272.png",
+      github: "https://github.com/YashKhandelwal0705/House-price-prediction"
     },
     {
       title: "Heart Disease Data Visualization",
@@ -21,7 +24,8 @@ const Projects = () => {
         "Created an interactive, accessible dashboard for visual insights, facilitating more informed decision making for healthcare analytics."
       ],
       tags: ["Data Visualization", "Python", "Matplotlib", "Seaborn"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      github: "https://github.com/YashKhandelwal0705/HeartDiseaseVisualization"
     }
   ];
 
@@ -47,7 +51,7 @@ const Projects = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                     <p className="text-gray-600 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag, tagIndex) => (
                         <span 
                           key={tagIndex}
@@ -57,6 +61,15 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
+                    <a 
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-gray-700 hover:text-black transition-colors"
+                    >
+                      <Github className="h-5 w-5 mr-2" />
+                      View on GitHub
+                    </a>
                   </div>
                 </div>
                 
