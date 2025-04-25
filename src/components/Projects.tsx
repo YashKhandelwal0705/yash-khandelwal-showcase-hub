@@ -1,5 +1,6 @@
 
-import { ExternalLink, Github } from 'lucide-react';
+import React from 'react';
+import { Github } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -37,52 +38,42 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="group h-[500px] [perspective:1000px] animate-fade-in"
+              className="bg-white rounded-lg shadow-lg overflow-hidden animate-fade-in"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                {/* Front of card */}
-                <div className="absolute inset-0 bg-white rounded-lg shadow-lg overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag, tagIndex) => (
-                        <span 
-                          key={tagIndex}
-                          className="bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <a 
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-gray-700 hover:text-black transition-colors"
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span 
+                      key={tagIndex}
+                      className="bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full"
                     >
-                      <Github className="h-5 w-5 mr-2" />
-                      View on GitHub
-                    </a>
-                  </div>
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-                
-                {/* Back of card */}
-                <div className="absolute inset-0 h-full w-full rounded-lg bg-white px-6 py-8 shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                  <div className="space-y-4">
-                    {project.detailedDescription.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-gray-600 text-sm">
-                        • {detail}
-                      </p>
-                    ))}
-                  </div>
+                <a 
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-gray-700 hover:text-black transition-colors"
+                >
+                  <Github className="h-5 w-5 mr-2" />
+                  View on GitHub
+                </a>
+                <div className="mt-4 space-y-2">
+                  {project.detailedDescription.map((detail, detailIndex) => (
+                    <p key={detailIndex} className="text-gray-600 text-sm">
+                      • {detail}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>
