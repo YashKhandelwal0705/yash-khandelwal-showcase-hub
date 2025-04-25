@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
         <div className="md:w-1/2 animate-fade-in" style={{ animationDelay: '800ms' }}>
           <img
-            src="https://drive.google.com/file/d/1Rkp33vLH9brmhH7eBgKsba1ZIbAGXS9g/view?usp=sharing"
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
             alt="Profile"
             className="rounded-lg shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300 animate-pulse"
           />
