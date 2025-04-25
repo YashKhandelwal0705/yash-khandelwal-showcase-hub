@@ -1,29 +1,35 @@
 
+import { ExternalLink } from 'lucide-react';
+
 const Certifications = () => {
   const certifications = [
     {
       title: "Generative AI with LLM",
       issuer: "Coursera",
       date: "Mar 2024",
-      color: "border-blue-500"
+      color: "border-blue-500",
+      link: "https://coursera.org/share/94b72fc106f9af47a16b89f20fb673ed"
     },
     {
       title: "Machine Learning Program",
       issuer: "GeeksforGeeks",
       date: "Jul 2024",
-      color: "border-green-500"
+      color: "border-green-500",
+      link: "https://www.geeksforgeeks.org/certificate/42b0605e1a7058c9022956d3e0efc42f?utm_source=socials&utm_medium=cc_link"
     },
     {
       title: "Cloud Computing",
       issuer: "NPTEL",
       date: "Nov 2024",
-      color: "border-purple-500"
+      color: "border-purple-500",
+      link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS118S167020305904433055"
     },
     {
       title: "Algorithms",
       issuer: "Coursera",
       date: "Nov 2023",
-      color: "border-indigo-500"
+      color: "border-indigo-500",
+      link: "https://coursera.org/share/2983463721debede6b9b16a058409065"
     }
   ];
 
@@ -39,7 +45,15 @@ const Certifications = () => {
             >
               <h3 className="text-lg font-bold mb-2">{cert.title}</h3>
               <p className="text-gray-600 mb-2">{cert.issuer}</p>
-              <p className="text-sm text-gray-500">{cert.date}</p>
+              <p className="text-sm text-gray-500 mb-3">{cert.date}</p>
+              <a 
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm text-indigo-600 hover:text-indigo-800 transition-colors"
+              >
+                View Certificate <ExternalLink className="ml-1 h-4 w-4" />
+              </a>
             </div>
           ))}
         </div>
@@ -49,4 +63,3 @@ const Certifications = () => {
 };
 
 export default Certifications;
-
