@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Github } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const Projects = () => {
   const projects = [
@@ -58,15 +60,14 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <a 
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-gray-700 hover:text-black transition-colors"
+                <Button 
+                  variant="outline" 
+                  className="w-full flex items-center justify-center"
+                  onClick={() => window.open(project.github, '_blank')}
                 >
                   <Github className="h-5 w-5 mr-2" />
                   View on GitHub
-                </a>
+                </Button>
               </div>
             </div>
           ))}
