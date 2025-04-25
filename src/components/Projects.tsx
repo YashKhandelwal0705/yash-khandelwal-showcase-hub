@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github } from 'lucide-react';
 
@@ -68,13 +67,6 @@ const Projects = () => {
                   <Github className="h-5 w-5 mr-2" />
                   View on GitHub
                 </a>
-                <div className="mt-4 space-y-2">
-                  {project.detailedDescription.map((detail, detailIndex) => (
-                    <p key={detailIndex} className="text-gray-600 text-sm">
-                      • {detail}
-                    </p>
-                  ))}
-                </div>
               </div>
             </div>
           ))}
