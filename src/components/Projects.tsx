@@ -28,12 +28,13 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-playfair font-bold text-center mb-12">Featured Projects</h2>
+        <h2 className="text-3xl font-playfair font-bold text-center mb-12 animate-fade-in">Featured Projects</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="group h-[500px] [perspective:1000px]"
+              className="group h-[500px] [perspective:1000px] animate-fade-in"
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 {/* Front of card */}

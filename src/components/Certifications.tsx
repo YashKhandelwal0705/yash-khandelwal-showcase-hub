@@ -36,12 +36,15 @@ const Certifications = () => {
   return (
     <section id="certifications" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-playfair font-bold text-center mb-12">Certifications</h2>
+        <h2 className="text-3xl font-playfair font-bold text-center mb-12 animate-fade-in">
+          Certifications
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
             <div 
               key={index}
-              className={`bg-white rounded-lg p-6 shadow-md border-l-4 ${cert.color} transform hover:scale-105 transition-transform duration-300`}
+              className={`bg-white rounded-lg p-6 shadow-md border-l-4 ${cert.color} transform hover:scale-105 transition-all duration-300 animate-fade-in`}
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <h3 className="text-lg font-bold mb-2">{cert.title}</h3>
               <p className="text-gray-600 mb-2">{cert.issuer}</p>
