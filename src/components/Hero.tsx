@@ -1,3 +1,4 @@
+
 import { Github, Linkedin, Mail, FileDown } from "lucide-react";
 
 const Hero = () => {
@@ -52,9 +53,9 @@ const Hero = () => {
         </div>
         <div className="md:w-1/2 animate-fade-in" style={{ animationDelay: '800ms' }}>
           <img
-            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-            alt="Profile"
-            className="rounded-lg shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300 animate-pulse"
+            src="/lovable-uploads/27f23704-a428-413d-93ed-480c32951bb2.png"
+            alt="Yash Khandelwal Profile"
+            className="rounded-lg shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>
