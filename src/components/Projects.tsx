@@ -6,28 +6,18 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "House Price Prediction",
-      description: "Implemented machine learning techniques including Logistic Regression, Decision Trees, and Random Forests with optimized hyperparameters. Built a complete ML pipeline for accurate house price predictions.",
-      detailedDescription: [
-        "Developed a predictive model using multiple machine learning techniques, including Logistic Regression, Decision Trees, and Random Forests, for forecasting house prices based on various features such as square footage, location, and more.",
-        "Implemented hyperparameter tuning strategies to optimize model accuracy and performance, achieving a notable prediction accuracy.",
-        "Built an end-to-end pipeline for data preprocessing, model training, evaluation, and deployment, significantly reducing prediction error for real estate forecasting."
-      ],
-      tags: ["Machine Learning", "Python", "Scikit-learn", "Data Analysis"],
+      title: "Insurance Claim Severity Prediction System",
+      description: "Built an end-to-end ML pipeline using XGBoost and Random Forest, achieving R2 score of 0.87 on claim severity prediction through advanced feature engineering and hyperparameter tuning.",
+      tags: ["Machine Learning", "XGBoost", "Random Forest", "Python", "SHAP", "Scikit-learn"],
       image: "/lovable-uploads/53920492-1217-4755-937a-2ee5f30b5272.png",
-      github: "https://github.com/YashKhandelwal0705/House-price-prediction"
+      github: "https://github.com/YashKhandelwal0705/insurance_claim_prediction"
     },
     {
-      title: "Heart Disease Data Visualization",
-      description: "Developed comprehensive visualizations using Matplotlib & Seaborn to analyze health data trends. Created insightful visual representations for better understanding of heart disease patterns.",
-      detailedDescription: [
-        "Developed a comprehensive analysis and visualization project on heart disease risk factors, leveraging datasets to uncover meaningful trends in patient demographics, cholesterol levels, blood pressure, and other critical indicators.",
-        "Implemented advanced data visualization techniques using Matplotlib and Seaborn, providing a clear depiction of factors with the highest correlation to heart disease.",
-        "Created an interactive, accessible dashboard for visual insights, facilitating more informed decision making for healthcare analytics."
-      ],
-      tags: ["Data Visualization", "Python", "Matplotlib", "Seaborn"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      github: "https://github.com/YashKhandelwal0705/HeartDiseaseVisualization"
+      title: "Real Time Sign Language Translation",
+      description: "Developed a real-time Sign Language Translation system utilizing YOLOv8 Nano architecture for hand gesture recognition, implementing advanced feature extraction and normalization techniques for 4 distinct gestures.",
+      tags: ["YOLOv8", "Flask", "MediaPipe", "OpenCV", "Computer Vision", "Deep Learning"],
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19",
+      github: "https://github.com/YashKhandelwal0705/Real-Time-Sign-Language-Translation"
     }
   ];
 
