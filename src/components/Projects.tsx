@@ -9,14 +9,14 @@ const Projects = () => {
       title: "Insurance Claim Severity Prediction System",
       description: "Built an end-to-end ML pipeline using XGBoost and Random Forest, achieving R2 score of 0.87 on claim severity prediction through advanced feature engineering and hyperparameter tuning.",
       tags: ["Machine Learning", "XGBoost", "Random Forest", "Python", "SHAP", "Scikit-learn"],
-      image: "/lovable-uploads/53920492-1217-4755-937a-2ee5f30b5272.png",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       github: "https://github.com/YashKhandelwal0705/insurance_claim_prediction"
     },
     {
       title: "Real Time Sign Language Translation",
       description: "Developed a real-time Sign Language Translation system utilizing YOLOv8 Nano architecture for hand gesture recognition, implementing advanced feature extraction and normalization techniques for 4 distinct gestures.",
       tags: ["YOLOv8", "Flask", "MediaPipe", "OpenCV", "Computer Vision", "Deep Learning"],
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
       github: "https://github.com/YashKhandelwal0705/Real-Time-Sign-Language-Translation"
     }
   ];
