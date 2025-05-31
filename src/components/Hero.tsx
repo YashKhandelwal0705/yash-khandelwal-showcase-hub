@@ -41,7 +41,7 @@ const Hero = () => {
               </a>
             </div>
             <a
-              href="https://drive.google.com/file/d/1kLqmqC8YQsHrxvPBdVxpVbxvfLHZI3Is/view?usp=sharing"
+              href="https://drive.google.com/file/d/1cVWmuP3-hN8YFsBFCY9vaHTCo4UqCfpg/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
@@ -53,7 +53,7 @@ const Hero = () => {
         </div>
         <div className="md:w-1/2 animate-fade-in" style={{ animationDelay: '800ms' }}>
           <img
-            src="/lovable-uploads/27f23704-a428-413d-93ed-480c32951bb2.png"
+            src="/lovable-uploads/20901a5a-b8f8-47da-b51b-2960fc628079.png"
             alt="Yash Khandelwal Profile"
             className="rounded-lg shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-300"
           />
