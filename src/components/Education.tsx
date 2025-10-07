@@ -6,8 +6,9 @@ const Education = () => {
     {
       degree: "BTech CSE",
       institution: "Lovely Professional University",
-      period: "2022–2026",
-      score: "CGPA: 8.1"
+      period: "Sept 2022 – Present",
+      score: "CGPA: 8.21",
+      coursework: ["Data Structures and Algorithms", "Machine Learning", "Database Management", "Data Science", "Object Oriented Programming", "SDLC"]
     }
   ];
 
@@ -21,7 +22,7 @@ const Education = () => {
               key={index}
               className="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300"
             >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">{edu.degree}</h3>
                   <p className="text-gray-600">{edu.institution}</p>
@@ -31,6 +32,18 @@ const Education = () => {
                   <p className="text-gray-500">{edu.score}</p>
                 </div>
               </div>
+              {edu.coursework && (
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Relevant Coursework</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {edu.coursework.map((course, idx) => (
+                      <span key={idx} className="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
+                        {course}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>

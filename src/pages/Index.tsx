@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Certifications from "@/components/Certifications";
 import Education from "@/components/Education";
+import Training from "@/components/Training";
 import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
 
@@ -19,6 +20,7 @@ const Index = () => {
       <Skills />
       <Certifications />
       <Education />
+      <Training />
       <Achievements />
       <Contact />
       <footer className="bg-gray-100 py-4 text-center">

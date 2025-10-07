@@ -10,7 +10,7 @@ const Achievements = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <span className="text-indigo-500 mr-2">•</span>
-                <span>1100+ rating on CodeForces</span>
+                <span>Achieved 1100+ contest rating on CodeForces (Aug 2025)</span>
               </li>
               <li className="flex items-center">
                 <span className="text-indigo-500 mr-2">•</span>

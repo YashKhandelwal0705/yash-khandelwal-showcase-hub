@@ -6,16 +6,23 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
+      title: "BlogForge – Blog Website",
+      description: "Built a fully functional blog platform with user authentication, post CRUD, and contact form integration. Designed a secure Flask backend with SQLite for lightweight local data management and integrated email notifications using SMTP.",
+      tags: ["Python", "Flask", "SQLite", "SMTP", "HTML/CSS", "Bootstrap"],
+      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643",
+      github: "https://github.com/YashKhandelwal0705"
+    },
+    {
       title: "Insurance Claim Severity Prediction System",
-      description: "Built an end-to-end ML pipeline using XGBoost and Random Forest, achieving R2 score of 0.87 on claim severity prediction through advanced feature engineering and hyperparameter tuning.",
-      tags: ["Machine Learning", "XGBoost", "Random Forest", "Python", "SHAP", "Scikit-learn"],
+      description: "Built an ML pipeline with XGBoost & Random Forest, achieving R2 0.87 through feature engineering and tuning. Integrated SHAP explainability for premium adjustment, fraud risk scoring, and claim decision support.",
+      tags: ["Python", "XGBoost", "Random Forest", "SHAP", "Scikit-learn"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       github: "https://github.com/YashKhandelwal0705/insurance_claim_prediction"
     },
     {
-      title: "Real Time Sign Language Translation",
-      description: "Developed a real-time Sign Language Translation system utilizing YOLOv8 Nano architecture for hand gesture recognition, implementing advanced feature extraction and normalization techniques for 4 distinct gestures.",
-      tags: ["YOLOv8", "Flask", "MediaPipe", "OpenCV", "Computer Vision", "Deep Learning"],
+      title: "Real-Time Sign Language Translation",
+      description: "Developed a real-time Sign Language Translator using YOLOv8 Nano for 4 gestures. Engineered a Flask-based app with MediaPipe and OpenCV for real-time gesture recognition with optimized hyperparameters for stable GPU performance.",
+      tags: ["YOLOv8", "Flask", "MediaPipe", "OpenCV", "Computer Vision"],
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
       github: "https://github.com/YashKhandelwal0705/Real-Time-Sign-Language-Translation"
     }

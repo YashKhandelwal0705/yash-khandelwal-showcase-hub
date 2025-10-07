@@ -11,8 +11,8 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", icon: <Python className="w-5 h-5" /> },
         { name: "Java", icon: <Java className="w-5 h-5" /> },
+        { name: "Python", icon: <Python className="w-5 h-5" /> },
         { name: "C++", icon: <span className="font-mono font-bold">C++</span> },
         { name: "SQL", icon: <span className="font-mono">SQL</span> }
       ],
@@ -20,27 +20,41 @@ const Skills = () => {
       iconColor: "text-blue-500"
     },
     {
-      title: "Tools",
+      title: "Frameworks & Libraries",
+      skills: [
+        { name: "Pandas", icon: "PD" },
+        { name: "NumPy", icon: "NP" },
+        { name: "Scikit-learn", icon: "SK" },
+        { name: "Matplotlib", icon: "MP" },
+        { name: "Seaborn", icon: "SB" },
+        { name: "OpenCV", icon: "CV" },
+        { name: "Flask", icon: "FL" }
+      ],
+      bgColor: "bg-green-50",
+      iconColor: "text-green-500"
+    },
+    {
+      title: "Tools & Platforms",
       skills: [
         { name: "Git", icon: <GitBranch className="w-5 h-5" /> },
         { name: "GitHub", icon: <Github className="w-5 h-5" /> },
-        { name: "Google Colab", icon: "GC" },
-        { name: "Jupyter", icon: "JP" },
-        { name: "Tableau", icon: "TB" }
+        { name: "Tableau", icon: "TB" },
+        { name: "MySQL", icon: "SQL" }
       ],
       bgColor: "bg-purple-50",
       iconColor: "text-purple-500"
     },
     {
-      title: "Libraries",
+      title: "Soft Skills",
       skills: [
-        { name: "Pandas", icon: "PD" },
-        { name: "NumPy", icon: "NP" },
-        { name: "Matplotlib", icon: "MP" },
-        { name: "Seaborn", icon: "SB" }
+        { name: "Leadership", icon: "LD" },
+        { name: "Teamwork", icon: "TW" },
+        { name: "Event Handling", icon: "EH" },
+        { name: "Problem Solving", icon: "PS" },
+        { name: "Time Management", icon: "TM" }
       ],
-      bgColor: "bg-green-50",
-      iconColor: "text-green-500"
+      bgColor: "bg-orange-50",
+      iconColor: "text-orange-500"
     }
   ];
 
@@ -48,7 +62,7 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-playfair font-bold text-center mb-12">Skills & Expertise</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <div 
               key={index}

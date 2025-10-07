@@ -4,8 +4,15 @@ import { ExternalLink } from 'lucide-react';
 const Certifications = () => {
   const certifications = [
     {
+      title: "Divide & Conquer, Sorting & Searching, and Randomized Algorithms",
+      issuer: "Stanford",
+      date: "Nov 2023",
+      color: "border-red-500",
+      link: "#"
+    },
+    {
       title: "Generative AI with LLM",
-      issuer: "Coursera",
+      issuer: "DeepLearning.AI",
       date: "Mar 2024",
       color: "border-blue-500",
       link: "https://coursera.org/share/94b72fc106f9af47a16b89f20fb673ed"
@@ -23,13 +30,6 @@ const Certifications = () => {
       date: "Nov 2024",
       color: "border-purple-500",
       link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS118S167020305904433055"
-    },
-    {
-      title: "Algorithms",
-      issuer: "Coursera",
-      date: "Nov 2023",
-      color: "border-indigo-500",
-      link: "https://coursera.org/share/2983463721debede6b9b16a058409065"
     }
   ];
 
@@ -39,7 +39,7 @@ const Certifications = () => {
         <h2 className="text-3xl font-playfair font-bold text-center mb-12 animate-fade-in">
           Certifications
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {certifications.map((cert, index) => (
             <div 
               key={index}
