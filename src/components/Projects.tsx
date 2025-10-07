@@ -10,7 +10,7 @@ const Projects = () => {
       description: "Built a fully functional blog platform with user authentication, post CRUD, and contact form integration. Designed a secure Flask backend with SQLite for lightweight local data management and integrated email notifications using SMTP.",
       tags: ["Python", "Flask", "SQLite", "SMTP", "HTML/CSS", "Bootstrap"],
       image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643",
-      github: "https://github.com/YashKhandelwal0705"
+      github: "https://github.com/YashKhandelwal0705/BlogForge-BlogWebsite"
     },
     {
       title: "Insurance Claim Severity Prediction System",
