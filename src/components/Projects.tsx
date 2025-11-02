@@ -29,38 +29,48 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-spacing bg-gradient-to-b from-secondary/30 to-background">
-      <div className="content-container">
-        <h2 className="section-header font-playfair animate-fade-in">
-          Featured Projects
-        </h2>
-        <div className="section-divider"></div>
+    <section id="projects" className="section-spacing relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20"></div>
+      
+      <div className="content-container relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="section-header font-playfair animate-fade-in">
+            Featured Projects
+          </h2>
+          <div className="section-divider"></div>
+          <p className="section-subtitle animate-fade-in" style={{ animationDelay: '100ms' }}>
+            Crafting innovative solutions through data science and machine learning
+          </p>
+        </div>
         
-        <div className="grid md:grid-cols-2 gap-7 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-card rounded-xl overflow-hidden hover-lift animate-fade-in border border-border shadow-card"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="group bg-card rounded-2xl overflow-hidden hover-lift animate-slide-up border border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="relative overflow-hidden group h-52">
+              <div className="relative overflow-hidden h-64">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                <div className="absolute top-4 right-4">
+                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                </div>
               </div>
               
-              <div className="p-7 space-y-4">
-                <h3 className="text-xl font-bold text-foreground leading-snug">{project.title}</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">{project.description}</p>
+              <div className="p-8 space-y-5">
+                <h3 className="text-2xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300">{project.title}</h3>
+                <p className="text-muted-foreground text-base leading-[1.75]">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-2 pt-1">
+                <div className="flex flex-wrap gap-2.5 pt-2">
                   {project.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
-                      className="bg-secondary text-secondary-foreground text-[13px] px-3 py-1.5 rounded-md font-medium"
+                      className="bg-secondary/60 text-secondary-foreground text-sm px-3.5 py-1.5 rounded-lg font-medium border border-border/30 hover:border-primary/30 transition-colors duration-300"
                     >
                       {tag}
                     </span>
@@ -69,10 +79,10 @@ const Projects = () => {
                 
                 <Button 
                   variant="outline" 
-                  className="w-full flex items-center justify-center gap-2 mt-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+                  className="w-full flex items-center justify-center gap-2.5 mt-4 h-12 text-base hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 rounded-xl"
                   onClick={() => window.open(project.github, '_blank')}
                 >
-                  <Github className="h-4 w-4" />
+                  <Github className="h-5 w-5" />
                   View on GitHub
                 </Button>
               </div>

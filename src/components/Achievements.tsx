@@ -1,41 +1,39 @@
 
 const Achievements = () => {
+  const achievements = [
+    {
+      title: "Competitive Programming Excellence",
+      description: "Achieved 1100+ contest rating on CodeForces (Aug 2025) and solved 300+ problems across LeetCode and GeeksforGeeks, demonstrating strong problem-solving abilities and algorithmic expertise."
+    },
+    {
+      title: "Technical Mastery",
+      description: "Developed proficiency across multiple programming languages and frameworks with a strong foundation in Data Structures and Algorithms, enabling effective implementation of complex solutions."
+    }
+  ];
+
   return (
-    <section className="section-spacing bg-gradient-to-b from-background to-secondary/30">
-      <div className="content-container">
-        <h2 className="section-header font-playfair">
-          Achievements
-        </h2>
-        <div className="section-divider"></div>
+    <section className="section-spacing relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 to-background"></div>
+      
+      <div className="content-container relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="section-header font-playfair animate-fade-in">
+            Achievements
+          </h2>
+          <div className="section-divider"></div>
+        </div>
         
-        <div className="grid md:grid-cols-2 gap-7 max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-primary/[0.03] to-accent/[0.03] rounded-xl p-8 md:p-9 border border-border hover-lift animate-fade-in shadow-card">
-            <h3 className="text-xl md:text-2xl font-bold text-primary mb-6 tracking-tight">Competitive Programming</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <span className="text-primary text-lg mt-0.5 flex-shrink-0">✓</span>
-                <span className="text-muted-foreground text-[15px] leading-relaxed">Achieved 1100+ contest rating on CodeForces (Aug 2025)</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary text-lg mt-0.5 flex-shrink-0">✓</span>
-                <span className="text-muted-foreground text-[15px] leading-relaxed">Solved 300+ problems on LeetCode and GeeksforGeeks</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-accent/[0.03] to-primary/[0.03] rounded-xl p-8 md:p-9 border border-border hover-lift animate-fade-in shadow-card" style={{ animationDelay: '100ms' }}>
-            <h3 className="text-xl md:text-2xl font-bold text-accent mb-6 tracking-tight">Technical Expertise</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <span className="text-accent text-lg mt-0.5 flex-shrink-0">✓</span>
-                <span className="text-muted-foreground text-[15px] leading-relaxed">Proficient in multiple programming languages and frameworks</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-accent text-lg mt-0.5 flex-shrink-0">✓</span>
-                <span className="text-muted-foreground text-[15px] leading-relaxed">Strong foundation in Data Structures and Algorithms</span>
-              </li>
-            </ul>
-          </div>
+        <div className="max-w-5xl mx-auto space-y-6">
+          {achievements.map((achievement, index) => (
+            <div 
+              key={index}
+              className="card-premium animate-slide-up hover:shadow-2xl transition-all duration-500"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <h3 className="text-2xl font-bold text-foreground mb-4 leading-tight">{achievement.title}</h3>
+              <p className="text-lg text-muted-foreground leading-[1.75]">{achievement.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

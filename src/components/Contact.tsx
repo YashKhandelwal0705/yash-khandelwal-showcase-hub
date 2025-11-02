@@ -59,94 +59,111 @@ ${formData.message}
   };
 
   return (
-    <section id="contact" className="section-spacing bg-gradient-to-b from-secondary/30 to-background">
-      <div className="content-container">
-        <h2 className="section-header font-playfair animate-fade-in">
-          Let's Connect
-        </h2>
-        <div className="section-divider"></div>
+    <section id="contact" className="section-spacing relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20"></div>
+      
+      <div className="content-container relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="section-header font-playfair animate-fade-in">
+            Let's Connect
+          </h2>
+          <div className="section-divider"></div>
+          <p className="section-subtitle animate-fade-in" style={{ animationDelay: '100ms' }}>
+            Have a project in mind? Let's discuss how we can work together
+          </p>
+        </div>
         
-        <div className="grid md:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
-          <div className="space-y-5 bg-card p-8 md:p-9 rounded-xl border border-border hover-lift shadow-card">
-            <h3 className="text-xl font-bold text-foreground mb-6 tracking-tight">
-              Contact Information
-            </h3>
-            <div className="space-y-3">
-              <a 
-                href="mailto:yashkhandelwal0705@gmail.com" 
-                className="flex items-center p-4 bg-secondary rounded-lg hover:bg-primary/10 transition-all duration-300 group border border-transparent hover:border-primary/30"
-              >
-                <Mail className="h-4 w-4 mr-3 text-primary group-hover:scale-110 transition-transform flex-shrink-0" />
-                <span className="text-muted-foreground text-[14px] group-hover:text-primary transition-colors">
-                  yashkhandelwal0705@gmail.com
-                </span>
-              </a>
-              <a 
-                href="tel:+919414105828" 
-                className="flex items-center p-4 bg-secondary rounded-lg hover:bg-primary/10 transition-all duration-300 group border border-transparent hover:border-primary/30"
-              >
-                <span className="mr-3 text-xl group-hover:scale-110 transition-transform flex-shrink-0">📞</span>
-                <span className="text-muted-foreground text-[14px] group-hover:text-primary transition-colors">
-                  +91 9414105828
-                </span>
-              </a>
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="space-y-8 animate-slide-up">
+            <div className="card-premium">
+              <h3 className="text-2xl font-bold text-foreground mb-8 leading-tight">Contact Information</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-5 group">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                    <Mail className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-2 font-semibold uppercase tracking-wide">Email</p>
+                    <a href="mailto:yashkhandelwal0705@gmail.com" className="text-lg text-foreground hover:text-primary transition-colors duration-300 font-medium">
+                      yashkhandelwal0705@gmail.com
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-5 group">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                    <span className="text-3xl group-hover:scale-110 transition-transform duration-300">📞</span>
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-2 font-semibold uppercase tracking-wide">Phone</p>
+                    <a href="tel:+919414105828" className="text-lg text-foreground hover:text-primary transition-colors duration-300 font-medium">
+                      +91-9414105828
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <form 
-            onSubmit={handleSubmit} 
-            className="space-y-5 bg-card p-8 md:p-9 rounded-xl border border-border hover-lift shadow-card"
-          >
-            <div>
-              <label htmlFor="name" className="block text-[13px] font-semibold text-foreground mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg border-2 border-border bg-background focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-200 text-foreground text-[14px]"
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-[13px] font-semibold text-foreground mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg border-2 border-border bg-background focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-200 text-foreground text-[14px]"
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-[13px] font-semibold text-foreground mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                rows={5}
-                className="w-full px-4 py-3 rounded-lg border-2 border-border bg-background focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-200 text-foreground text-[14px] resize-none"
-                required
-              />
-            </div>
-
-            <Button 
-              type="submit" 
-              className="w-full bg-primary hover:bg-primary-dark text-primary-foreground font-semibold py-3.5 rounded-lg hover-lift transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-card text-[14px]"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </Button>
-          </form>
+          
+          <div className="animate-slide-up" style={{ animationDelay: '200ms' }}>
+            <form onSubmit={handleSubmit} className="card-premium space-y-7">
+              <h3 className="text-2xl font-bold text-foreground leading-tight">Send a Message</h3>
+              
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-5 py-4 rounded-xl border-2 border-input bg-background text-foreground focus:outline-none focus:border-primary transition-all duration-300 text-base"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-5 py-4 rounded-xl border-2 border-input bg-background text-foreground focus:outline-none focus:border-primary transition-all duration-300 text-base"
+                  placeholder="your.email@example.com"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  rows={6}
+                  className="w-full px-5 py-4 rounded-xl border-2 border-input bg-background text-foreground focus:outline-none focus:border-primary transition-all duration-300 resize-none text-base"
+                  placeholder="Your message..."
+                  required
+                />
+              </div>
+              
+              <Button 
+                type="submit" 
+                className="w-full bg-gradient-to-r from-primary to-primary-dark text-primary-foreground font-bold py-4 rounded-xl hover:shadow-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-base uppercase tracking-wide"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

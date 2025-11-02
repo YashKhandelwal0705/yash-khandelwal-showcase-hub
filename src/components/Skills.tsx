@@ -9,77 +9,65 @@ import {
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming Languages",
-      skills: [
-        { name: "Java", icon: <Java className="w-5 h-5" /> },
-        { name: "Python", icon: <Python className="w-5 h-5" /> },
-        { name: "C++", icon: <span className="font-mono font-bold">C++</span> },
-        { name: "SQL", icon: <span className="font-mono">SQL</span> }
-      ],
-      gradient: "from-primary/10 to-primary/5"
+      title: "Languages",
+      icon: "💻",
+      items: ["Java", "Python", "C++", "SQL"]
     },
     {
-      title: "Frameworks & Libraries",
-      skills: [
-        { name: "Pandas", icon: "PD" },
-        { name: "NumPy", icon: "NP" },
-        { name: "Scikit-learn", icon: "SK" },
-        { name: "Matplotlib", icon: "MP" },
-        { name: "Seaborn", icon: "SB" },
-        { name: "OpenCV", icon: "CV" },
-        { name: "Flask", icon: "FL" }
-      ],
-      gradient: "from-accent/10 to-accent/5"
+      title: "Frameworks/Libraries",
+      icon: "⚙️",
+      items: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "OpenCV", "Flask"]
     },
     {
-      title: "Tools & Platforms",
-      skills: [
-        { name: "Git", icon: <GitBranch className="w-5 h-5" /> },
-        { name: "GitHub", icon: <Github className="w-5 h-5" /> },
-        { name: "Tableau", icon: "TB" },
-        { name: "MySQL", icon: "SQL" }
-      ],
-      gradient: "from-primary/15 to-primary/5"
+      title: "Tools/Platforms",
+      icon: "🛠️",
+      items: ["Git", "GitHub", "Tableau", "MySQL"]
     },
     {
       title: "Soft Skills",
-      skills: [
-        { name: "Leadership", icon: "LD" },
-        { name: "Teamwork", icon: "TW" },
-        { name: "Event Handling", icon: "EH" },
-        { name: "Problem Solving", icon: "PS" },
-        { name: "Time Management", icon: "TM" }
-      ],
-      gradient: "from-accent/15 to-accent/5"
+      icon: "🤝",
+      items: ["Leadership", "Teamwork", "Event Handling", "Problem Solving", "Time Management"]
     }
   ];
 
   return (
-    <section id="skills" className="section-spacing bg-gradient-to-b from-background to-secondary/30">
-      <div className="content-container">
-        <h2 className="section-header font-playfair">
-          Skills & Expertise
-        </h2>
-        <div className="section-divider"></div>
+    <section id="skills" className="section-spacing relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 to-background"></div>
+      
+      <div className="content-container relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="section-header font-playfair animate-fade-in">
+            Skills & Expertise
+          </h2>
+          <div className="section-divider"></div>
+          <p className="section-subtitle animate-fade-in" style={{ animationDelay: '100ms' }}>
+            A comprehensive toolkit for building intelligent solutions
+          </p>
+        </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {skillCategories.map((category, index) => (
             <div 
-              key={index}
-              className={`bg-gradient-to-br ${category.gradient} rounded-xl p-6 border border-border hover-lift animate-fade-in shadow-subtle`}
-              style={{ animationDelay: `${index * 80}ms` }}
+              key={index} 
+              className="group bg-card rounded-2xl border border-border/50 p-8 hover-lift animate-slide-up shadow-md hover:shadow-xl transition-all duration-500"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <h3 className="text-lg font-bold text-foreground mb-5 tracking-tight">{category.title}</h3>
-              <div className="space-y-2.5">
-                {category.skills.map((skill, skillIndex) => (
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-2xl group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-bold text-foreground">
+                  {category.title}
+                </h3>
+              </div>
+              <div className="space-y-3.5">
+                {category.items.map((skill, skillIndex) => (
                   <div 
-                    key={skillIndex}
-                    className="flex items-center bg-card rounded-lg px-3 py-2.5 shadow-subtle hover:shadow-card transition-all duration-300"
+                    key={skillIndex} 
+                    className="text-base text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center gap-3 group/item"
                   >
-                    <span className="mr-3 text-primary flex items-center justify-center w-5 h-5 font-semibold text-[13px]">
-                      {skill.icon}
-                    </span>
-                    <span className="text-foreground font-medium text-[14px]">{skill.name}</span>
+                    <span className="w-2 h-2 bg-primary/40 rounded-full group-hover/item:bg-primary group-hover/item:scale-125 transition-all duration-300"></span>
+                    <span className="font-medium">{skill}</span>
                   </div>
                 ))}
               </div>

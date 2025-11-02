@@ -34,32 +34,42 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="section-spacing bg-gradient-to-b from-secondary/30 to-background">
-      <div className="content-container">
-        <h2 className="section-header font-playfair animate-fade-in">
-          Certifications
-        </h2>
-        <div className="section-divider"></div>
+    <section id="certifications" className="section-spacing relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20"></div>
+      
+      <div className="content-container relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="section-header font-playfair animate-fade-in">
+            Certifications
+          </h2>
+          <div className="section-divider"></div>
+          <p className="section-subtitle animate-fade-in" style={{ animationDelay: '100ms' }}>
+            Continuous learning and professional development milestones
+          </p>
+        </div>
         
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {certifications.map((cert, index) => (
             <div 
-              key={index}
-              className={`bg-card rounded-xl p-7 border-l-[3px] ${cert.color} hover-lift animate-fade-in border-t border-r border-b border-border shadow-card`}
-              style={{ animationDelay: `${index * 80}ms` }}
+              key={index} 
+              className="group bg-card rounded-2xl border-l-[6px] border-primary p-8 hover-lift animate-slide-up shadow-md hover:shadow-xl transition-all duration-500"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <h3 className="text-base md:text-lg font-bold text-foreground mb-3 leading-snug">{cert.title}</h3>
-              <p className="text-muted-foreground font-semibold mb-1.5 text-sm">{cert.issuer}</p>
-              <p className="text-[13px] text-muted-foreground mb-5">{cert.date}</p>
-              <a 
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[13px] text-primary hover:text-accent font-semibold transition-colors group"
-              >
-                View Certificate 
-                <ExternalLink className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
-              </a>
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300">{cert.title}</h3>
+              <p className="text-lg text-primary font-semibold mb-2.5">{cert.issuer}</p>
+              <p className="text-sm text-muted-foreground font-medium">{cert.date}</p>
+              
+              {cert.link && (
+                <a 
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 mt-6 px-4 py-2.5 bg-primary/10 hover:bg-primary text-primary hover:text-primary-foreground rounded-lg transition-all duration-300 font-semibold text-sm"
+                >
+                  View Certificate
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              )}
             </div>
           ))}
         </div>

@@ -4,59 +4,67 @@
 
 @layer base {
   :root {
-    /* Refined Monotonous Palette - Subtle Blues */
-    --background: 215 28% 97%;
-    --foreground: 220 30% 18%;
+    /* Premium Monotone Palette - Sophisticated Navy Blues */
+    --background: 216 33% 97%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 18%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 18%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 220 70% 50%;
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 220 65% 65%;
-    --primary-dark: 220 75% 38%;
+    --primary-light: 221 70% 65%;
+    --primary-dark: 221 83% 45%;
 
-    --secondary: 215 25% 90%;
-    --secondary-foreground: 220 30% 18%;
+    --secondary: 216 24% 92%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 215 20% 92%;
-    --muted-foreground: 220 15% 42%;
+    --muted: 216 20% 94%;
+    --muted-foreground: 220 13% 46%;
 
-    --accent: 220 68% 55%;
+    --accent: 221 83% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 18% 86%;
-    --input: 215 18% 86%;
-    --ring: 220 70% 50%;
+    --border: 216 20% 88%;
+    --input: 216 20% 90%;
+    --ring: 221 83% 53%;
 
-    --radius: 0.625rem;
+    --radius: 0.75rem;
 
-    /* Subtle Gradients */
-    --gradient-section: linear-gradient(180deg, hsl(215 28% 97%) 0%, hsl(215 25% 95%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(215 28% 98%) 100%);
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(221 83% 45%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(216 33% 97%) 0%, hsl(216 28% 96%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(216 33% 99%) 100%);
+    --gradient-subtle: radial-gradient(ellipse at top, hsl(221 83% 53% / 0.03), transparent 50%);
 
-    /* Refined Shadows */
-    --shadow-subtle: 0 2px 8px -2px hsl(220 30% 18% / 0.06);
-    --shadow-card: 0 4px 16px -4px hsl(220 30% 18% / 0.08);
-    --shadow-hover: 0 8px 24px -6px hsl(220 30% 18% / 0.12);
+    /* Sophisticated Shadows */
+    --shadow-xs: 0 1px 2px 0 hsl(222 47% 11% / 0.03);
+    --shadow-sm: 0 2px 4px -1px hsl(222 47% 11% / 0.06);
+    --shadow-md: 0 4px 12px -2px hsl(222 47% 11% / 0.08);
+    --shadow-lg: 0 8px 24px -4px hsl(222 47% 11% / 0.12);
+    --shadow-xl: 0 12px 32px -6px hsl(222 47% 11% / 0.16);
+    --shadow-glow: 0 0 0 1px hsl(221 83% 53% / 0.08), 0 8px 24px -4px hsl(221 83% 53% / 0.2);
 
-    /* Smooth Transitions */
-    --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Fluid Transitions */
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 220 25% 30%;
-    --sidebar-primary: 220 70% 50%;
+    --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 215 25% 90%;
-    --sidebar-accent-foreground: 220 30% 18%;
-    --sidebar-border: 215 18% 86%;
-    --sidebar-ring: 220 70% 50%;
+    --sidebar-accent: 216 24% 92%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 216 20% 88%;
+    --sidebar-ring: 221 83% 53%;
   }
 
   .dark {
@@ -101,13 +109,29 @@
 @layer utilities {
   .animate-fade-in {
     opacity: 0;
-    animation: fadeIn 0.7s ease-out forwards;
+    animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-slide-up {
+    opacity: 0;
+    animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
     }
     to {
       opacity: 1;
@@ -120,24 +144,44 @@
   }
 
   .hover-lift:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .hover-scale {
+    transition: var(--transition-base);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
   }
 
   .section-spacing {
-    @apply py-20 md:py-28;
+    @apply py-24 md:py-32 lg:py-40;
   }
 
   .content-container {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
   }
 
   .section-header {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-center mb-3;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-foreground text-center mb-4 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-base md:text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-16 leading-relaxed;
   }
 
   .section-divider {
-    @apply w-16 h-0.5 bg-primary mx-auto mb-14 md:mb-16 rounded-full;
+    @apply w-20 h-1 bg-gradient-to-r from-primary to-primary-dark mx-auto mb-16 md:mb-20 rounded-full;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80 border border-border/50;
+  }
+
+  .card-premium {
+    @apply bg-card border border-border rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300;
   }
 }
 

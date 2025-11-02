@@ -23,10 +23,17 @@ const Index = () => {
       <Training />
       <Achievements />
       <Contact />
-      <footer className="bg-gray-100 py-4 text-center">
-        <p className="text-sm text-gray-600">
-          © {new Date().getFullYear()} Yash Khandelwal. All rights reserved.
-        </p>
+      <footer className="bg-gradient-to-t from-secondary/30 to-background border-t border-border/50 py-8">
+        <div className="content-container">
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-sm text-muted-foreground font-medium">
+              © {new Date().getFullYear()} Yash Khandelwal. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Designed & Developed with passion
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
