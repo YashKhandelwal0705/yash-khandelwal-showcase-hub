@@ -16,8 +16,7 @@ const Skills = () => {
         { name: "C++", icon: <span className="font-mono font-bold">C++</span> },
         { name: "SQL", icon: <span className="font-mono">SQL</span> }
       ],
-      bgColor: "bg-blue-50",
-      iconColor: "text-blue-500"
+      gradient: "from-primary/10 to-primary/5"
     },
     {
       title: "Frameworks & Libraries",
@@ -30,8 +29,7 @@ const Skills = () => {
         { name: "OpenCV", icon: "CV" },
         { name: "Flask", icon: "FL" }
       ],
-      bgColor: "bg-green-50",
-      iconColor: "text-green-500"
+      gradient: "from-accent/10 to-accent/5"
     },
     {
       title: "Tools & Platforms",
@@ -41,8 +39,7 @@ const Skills = () => {
         { name: "Tableau", icon: "TB" },
         { name: "MySQL", icon: "SQL" }
       ],
-      bgColor: "bg-purple-50",
-      iconColor: "text-purple-500"
+      gradient: "from-primary/15 to-primary/5"
     },
     {
       title: "Soft Skills",
@@ -53,32 +50,36 @@ const Skills = () => {
         { name: "Problem Solving", icon: "PS" },
         { name: "Time Management", icon: "TM" }
       ],
-      bgColor: "bg-orange-50",
-      iconColor: "text-orange-500"
+      gradient: "from-accent/15 to-accent/5"
     }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-24 bg-gradient-to-b from-card to-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-playfair font-bold text-center mb-12">Skills & Expertise</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className="text-4xl md:text-5xl font-playfair font-bold text-center text-foreground mb-4">
+          Skills & Expertise
+        </h2>
+        <div className="w-24 h-1 bg-primary mx-auto mb-16 rounded-full"></div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className={`${category.bgColor} rounded-lg p-6 shadow-md transform hover:scale-105 transition-transform duration-300`}
+              className={`bg-gradient-to-br ${category.gradient} backdrop-blur rounded-2xl p-6 border border-border hover-lift animate-fade-in`}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <h3 className="text-xl font-bold mb-4">{category.title}</h3>
-              <div className="space-y-2">
+              <h3 className="text-xl font-bold text-foreground mb-5">{category.title}</h3>
+              <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skillIndex}
-                    className="flex items-center bg-white rounded-lg p-2 shadow-sm"
+                    className="flex items-center bg-card rounded-xl p-3 shadow-sm hover:shadow-md transition-all duration-300"
                   >
-                    <span className={`mr-3 ${category.iconColor} flex items-center justify-center w-6 h-6`}>
+                    <span className="mr-3 text-primary flex items-center justify-center w-6 h-6 font-semibold text-sm">
                       {skill.icon}
                     </span>
-                    <span>{skill.name}</span>
+                    <span className="text-foreground font-medium">{skill.name}</span>
                   </div>
                 ))}
               </div>

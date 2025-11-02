@@ -13,31 +13,39 @@ const Education = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 bg-gradient-to-b from-secondary/30 to-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-playfair font-bold text-center mb-12">Education</h2>
-        <div className="space-y-8">
+        <h2 className="text-4xl md:text-5xl font-playfair font-bold text-center text-foreground mb-4">
+          Education
+        </h2>
+        <div className="w-24 h-1 bg-primary mx-auto mb-16 rounded-full"></div>
+        
+        <div className="max-w-4xl mx-auto space-y-8">
           {education.map((edu, index) => (
             <div 
               key={index}
-              className="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300"
+              className="bg-card rounded-2xl border border-border p-8 hover-lift animate-fade-in"
             >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">{edu.degree}</h3>
-                  <p className="text-gray-600">{edu.institution}</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-1">{edu.degree}</h3>
+                  <p className="text-lg text-muted-foreground">{edu.institution}</p>
                 </div>
-                <div className="mt-2 md:mt-0 text-right">
-                  <p className="text-indigo-600 font-semibold">{edu.period}</p>
-                  <p className="text-gray-500">{edu.score}</p>
+                <div className="md:text-right">
+                  <p className="text-primary font-semibold text-lg">{edu.period}</p>
+                  <p className="text-muted-foreground font-medium">{edu.score}</p>
                 </div>
               </div>
+              
               {edu.coursework && (
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Relevant Coursework</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="font-semibold text-foreground mb-4 text-lg">Relevant Coursework</h4>
+                  <div className="flex flex-wrap gap-3">
                     {edu.coursework.map((course, idx) => (
-                      <span key={idx} className="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">
+                      <span 
+                        key={idx} 
+                        className="bg-secondary text-secondary-foreground text-sm px-4 py-2 rounded-full font-medium hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                      >
                         {course}
                       </span>
                     ))}

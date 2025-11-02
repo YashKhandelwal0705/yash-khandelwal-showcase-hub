@@ -1,29 +1,36 @@
 
 const Training = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-gradient-to-b from-card to-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-playfair font-bold text-center mb-12">Training</h2>
-        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900">Complete Machine Learning and Data Science Program</h3>
-              <p className="text-indigo-600 font-semibold mt-1">GeeksforGeeks</p>
+        <h2 className="text-4xl md:text-5xl font-playfair font-bold text-center text-foreground mb-4">
+          Training & Development
+        </h2>
+        <div className="w-24 h-1 bg-primary mx-auto mb-16 rounded-full"></div>
+        
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl border border-border p-8 hover-lift animate-fade-in">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6 gap-4">
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-foreground mb-2">Complete Machine Learning and Data Science Program</h3>
+                <p className="text-lg text-primary font-semibold">GeeksforGeeks</p>
+              </div>
+              <div className="md:text-right">
+                <p className="text-muted-foreground font-medium">Jun 2024 – Jul 2024</p>
+              </div>
             </div>
-            <div className="mt-2 md:mt-0">
-              <p className="text-gray-600 font-medium">Jun 2024 – Jul 2024</p>
-            </div>
+            
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <span className="text-primary text-xl mt-1 flex-shrink-0">•</span>
+                <span className="text-muted-foreground leading-relaxed">Gained hands-on experience in data preprocessing, EDA, feature engineering, and predictive modeling using Python, Pandas, NumPy, and SQL</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary text-xl mt-1 flex-shrink-0">•</span>
+                <span className="text-muted-foreground leading-relaxed">Built, evaluated, and optimized machine learning models (regression, classification, clustering) for practical business use cases</span>
+              </li>
+            </ul>
           </div>
-          <ul className="mt-4 space-y-2">
-            <li className="flex items-start">
-              <span className="text-indigo-500 mr-2 mt-1">•</span>
-              <span className="text-gray-700">Gained hands-on experience in data preprocessing, EDA, feature engineering, and predictive modeling using Python, Pandas, NumPy, and SQL</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-indigo-500 mr-2 mt-1">•</span>
-              <span className="text-gray-700">Built, evaluated, and optimized machine learning models (regression, classification, clustering) for practical business use cases</span>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
