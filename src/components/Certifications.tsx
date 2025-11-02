@@ -34,31 +34,31 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="py-24 bg-gradient-to-b from-secondary/30 to-card">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-playfair font-bold text-center text-foreground mb-4 animate-fade-in">
+    <section id="certifications" className="section-spacing bg-gradient-to-b from-secondary/30 to-background">
+      <div className="content-container">
+        <h2 className="section-header font-playfair animate-fade-in">
           Certifications
         </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mb-16 rounded-full"></div>
+        <div className="section-divider"></div>
         
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
             <div 
               key={index}
-              className={`bg-card rounded-2xl p-6 border-l-4 ${cert.color} hover-lift animate-fade-in border-t border-r border-b border-border`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              className={`bg-card rounded-xl p-7 border-l-[3px] ${cert.color} hover-lift animate-fade-in border-t border-r border-b border-border shadow-card`}
+              style={{ animationDelay: `${index * 80}ms` }}
             >
-              <h3 className="text-lg font-bold text-foreground mb-3 leading-snug">{cert.title}</h3>
-              <p className="text-muted-foreground font-medium mb-2">{cert.issuer}</p>
-              <p className="text-sm text-muted-foreground mb-4">{cert.date}</p>
+              <h3 className="text-base md:text-lg font-bold text-foreground mb-3 leading-snug">{cert.title}</h3>
+              <p className="text-muted-foreground font-semibold mb-1.5 text-sm">{cert.issuer}</p>
+              <p className="text-[13px] text-muted-foreground mb-5">{cert.date}</p>
               <a 
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent font-medium transition-colors group"
+                className="inline-flex items-center gap-2 text-[13px] text-primary hover:text-accent font-semibold transition-colors group"
               >
                 View Certificate 
-                <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <ExternalLink className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
           ))}

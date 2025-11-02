@@ -55,31 +55,31 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-gradient-to-b from-card to-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-playfair font-bold text-center text-foreground mb-4">
+    <section id="skills" className="section-spacing bg-gradient-to-b from-background to-secondary/30">
+      <div className="content-container">
+        <h2 className="section-header font-playfair">
           Skills & Expertise
         </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mb-16 rounded-full"></div>
+        <div className="section-divider"></div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className={`bg-gradient-to-br ${category.gradient} backdrop-blur rounded-2xl p-6 border border-border hover-lift animate-fade-in`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              className={`bg-gradient-to-br ${category.gradient} rounded-xl p-6 border border-border hover-lift animate-fade-in shadow-subtle`}
+              style={{ animationDelay: `${index * 80}ms` }}
             >
-              <h3 className="text-xl font-bold text-foreground mb-5">{category.title}</h3>
-              <div className="space-y-3">
+              <h3 className="text-lg font-bold text-foreground mb-5 tracking-tight">{category.title}</h3>
+              <div className="space-y-2.5">
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skillIndex}
-                    className="flex items-center bg-card rounded-xl p-3 shadow-sm hover:shadow-md transition-all duration-300"
+                    className="flex items-center bg-card rounded-lg px-3 py-2.5 shadow-subtle hover:shadow-card transition-all duration-300"
                   >
-                    <span className="mr-3 text-primary flex items-center justify-center w-6 h-6 font-semibold text-sm">
+                    <span className="mr-3 text-primary flex items-center justify-center w-5 h-5 font-semibold text-[13px]">
                       {skill.icon}
                     </span>
-                    <span className="text-foreground font-medium">{skill.name}</span>
+                    <span className="text-foreground font-medium text-[14px]">{skill.name}</span>
                   </div>
                 ))}
               </div>

@@ -29,38 +29,38 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gradient-to-b from-secondary/30 to-card">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-playfair font-bold text-center text-foreground mb-4 animate-fade-in">
+    <section id="projects" className="section-spacing bg-gradient-to-b from-secondary/30 to-background">
+      <div className="content-container">
+        <h2 className="section-header font-playfair animate-fade-in">
           Featured Projects
         </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mb-16 rounded-full"></div>
+        <div className="section-divider"></div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-7 lg:gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-card rounded-2xl shadow-lg overflow-hidden hover-lift animate-fade-in border border-border"
-              style={{ animationDelay: `${index * 150}ms` }}
+              className="bg-card rounded-xl overflow-hidden hover-lift animate-fade-in border border-border shadow-card"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="relative overflow-hidden group">
+              <div className="relative overflow-hidden group h-52">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               
-              <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+              <div className="p-7 space-y-4">
+                <h3 className="text-xl font-bold text-foreground leading-snug">{project.title}</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 pt-1">
                   {project.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
-                      className="bg-secondary text-secondary-foreground text-sm px-3 py-1 rounded-full font-medium"
+                      className="bg-secondary text-secondary-foreground text-[13px] px-3 py-1.5 rounded-md font-medium"
                     >
                       {tag}
                     </span>
@@ -69,10 +69,10 @@ const Projects = () => {
                 
                 <Button 
                   variant="outline" 
-                  className="w-full flex items-center justify-center gap-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+                  className="w-full flex items-center justify-center gap-2 mt-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
                   onClick={() => window.open(project.github, '_blank')}
                 >
-                  <Github className="h-5 w-5" />
+                  <Github className="h-4 w-4" />
                   View on GitHub
                 </Button>
               </div>
