@@ -1,58 +1,30 @@
-
 import { useState } from 'react';
-import { Mail } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { Mail, Send, ArrowUpRight } from 'lucide-react';
 import { toast } from "sonner";
 import emailjs from 'emailjs-com';
+import RevealOnScroll from './RevealOnScroll';
 
-// Initialize EmailJS
-emailjs.init("vhjY1WjLHYvPkoCcQ"); 
+emailjs.init("vhjY1WjLHYvPkoCcQ");
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     try {
-      const serviceId = 'service_bvpmfpd';
-      const templateId = 'template_pfmmq2h';
-      
-      const formattedMessage = `
-From: ${formData.name}
-Email: ${formData.email}
-
-Message:
-${formData.message}
-      `;
-      
-      const templateParams = {
+      await emailjs.send('service_bvpmfpd', 'template_pfmmq2h', {
         from_name: `${formData.name} <${formData.email}>`,
         reply_to: formData.email,
-        message: formattedMessage,
+        message: `From: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
         to_email: 'yashkhandelwal0705@gmail.com',
-        subject: `Portfolio Contact: ${formData.name}`
-      };
-      
-      const response = await emailjs.send(serviceId, templateId, templateParams);
-      console.log('Email sent successfully:', response);
-      
-      toast.success("Message sent! Thank you for your message. I'll get back to you soon.");
-      
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
+        subject: `Portfolio Contact: ${formData.name}`,
       });
-    } catch (error) {
-      console.error('Failed to send email:', error);
-      toast.error("Something went wrong. Failed to send your message. Please try again later.");
+      toast.success("Message sent! I'll get back to you soon.");
+      setFormData({ name: '', email: '', message: '' });
+    } catch {
+      toast.error("Failed to send. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -60,110 +32,109 @@ ${formData.message}
 
   return (
     <section id="contact" className="section-spacing relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20"></div>
+      <div className="absolute inset-0" style={{ background: "var(--gradient-glow)" }} />
       
       <div className="content-container relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="section-header font-playfair animate-fade-in">
-            Let's Connect
+        <RevealOnScroll>
+          <span className="section-label">Get in Touch</span>
+          <h2 className="section-header">
+            Let's connect<span className="text-primary">.</span>
           </h2>
-          <div className="section-divider"></div>
-          <p className="section-subtitle animate-fade-in" style={{ animationDelay: '100ms' }}>
-            Have a project in mind? Let's discuss how we can work together
+          <p className="section-subtitle">
+            Have a project in mind or want to collaborate? I'd love to hear from you.
           </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="space-y-8 animate-slide-up">
-            <div className="card-premium">
-              <h3 className="text-2xl font-bold text-foreground mb-8 leading-tight">Contact Information</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-start gap-5 group">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                    <Mail className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-2 font-semibold uppercase tracking-wide">Email</p>
-                    <a href="mailto:yashkhandelwal0705@gmail.com" className="text-lg text-foreground hover:text-primary transition-colors duration-300 font-medium">
-                      yashkhandelwal0705@gmail.com
-                    </a>
-                  </div>
+        </RevealOnScroll>
+
+        <div className="mt-20 grid md:grid-cols-5 gap-10 max-w-5xl">
+          {/* Contact info */}
+          <RevealOnScroll className="md:col-span-2" delay={0.1}>
+            <div className="space-y-6">
+              <a
+                href="mailto:yashkhandelwal0705@gmail.com"
+                className="group glass-card rounded-2xl p-6 flex items-start gap-4 hover:border-primary/20 transition-all duration-300 block"
+              >
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="h-4 w-4 text-primary" />
                 </div>
-                
-                <div className="flex items-start gap-5 group">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                    <span className="text-3xl group-hover:scale-110 transition-transform duration-300">📞</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-2 font-semibold uppercase tracking-wide">Phone</p>
-                    <a href="tel:+919414105828" className="text-lg text-foreground hover:text-primary transition-colors duration-300 font-medium">
-                      +91-9414105828
-                    </a>
-                  </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Email</p>
+                  <p className="text-sm text-foreground font-medium group-hover:text-primary transition-colors duration-300">
+                    yashkhandelwal0705@gmail.com
+                  </p>
+                </div>
+              </a>
+
+              <div className="glass-card rounded-2xl p-6 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <span className="text-lg">📞</span>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Phone</p>
+                  <a href="tel:+919414105828" className="text-sm text-foreground font-medium hover:text-primary transition-colors duration-300">
+                    +91-9414105828
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div className="animate-slide-up" style={{ animationDelay: '200ms' }}>
-            <form onSubmit={handleSubmit} className="card-premium space-y-7">
-              <h3 className="text-2xl font-bold text-foreground leading-tight">Send a Message</h3>
-              
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-5 py-4 rounded-xl border-2 border-input bg-background text-foreground focus:outline-none focus:border-primary transition-all duration-300 text-base"
-                  placeholder="Your name"
-                  required
-                />
+          </RevealOnScroll>
+
+          {/* Form */}
+          <RevealOnScroll className="md:col-span-3" delay={0.2}>
+            <form onSubmit={handleSubmit} className="glass-card rounded-2xl p-8 space-y-6">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="name" className="block text-xs font-medium text-muted-foreground uppercase tracking-widest mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:bg-secondary/80 transition-all duration-300"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-xs font-medium text-muted-foreground uppercase tracking-widest mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:bg-secondary/80 transition-all duration-300"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
               </div>
-              
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-5 py-4 rounded-xl border-2 border-input bg-background text-foreground focus:outline-none focus:border-primary transition-all duration-300 text-base"
-                  placeholder="your.email@example.com"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-3 uppercase tracking-wide">
+                <label htmlFor="message" className="block text-xs font-medium text-muted-foreground uppercase tracking-widest mb-2">
                   Message
                 </label>
                 <textarea
                   id="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={6}
-                  className="w-full px-5 py-4 rounded-xl border-2 border-input bg-background text-foreground focus:outline-none focus:border-primary transition-all duration-300 resize-none text-base"
-                  placeholder="Your message..."
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-xl bg-secondary/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:bg-secondary/80 transition-all duration-300 resize-none"
+                  placeholder="Tell me about your project..."
                   required
                 />
               </div>
-              
-              <Button 
-                type="submit" 
-                className="w-full bg-gradient-to-r from-primary to-primary-dark text-primary-foreground font-bold py-4 rounded-xl hover:shadow-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-base uppercase tracking-wide"
+              <button
+                type="submit"
                 disabled={isSubmitting}
+                className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground rounded-xl font-semibold text-sm hover:shadow-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
-              </Button>
+                <Send className="h-4 w-4" />
+              </button>
             </form>
-          </div>
+          </RevealOnScroll>
         </div>
       </div>
     </section>

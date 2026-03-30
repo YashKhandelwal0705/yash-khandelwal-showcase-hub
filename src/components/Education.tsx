@@ -1,52 +1,69 @@
-
-import React from 'react';
+import RevealOnScroll from './RevealOnScroll';
 
 const Education = () => {
-  const courses = ["Data Structures and Algorithms", "Machine Learning", "Database Management", "Data Science", "Object Oriented Programming", "SDLC"];
+  const courses = [
+    "Data Structures and Algorithms",
+    "Machine Learning",
+    "Database Management",
+    "Data Science",
+    "Object Oriented Programming",
+    "SDLC",
+  ];
 
   return (
     <section className="section-spacing relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/20"></div>
-      
       <div className="content-container relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="section-header font-playfair animate-fade-in">
-            Education
+        <RevealOnScroll>
+          <span className="section-label">Education</span>
+          <h2 className="section-header">
+            Academic background<span className="text-primary">.</span>
           </h2>
-          <div className="section-divider"></div>
-        </div>
-        
-        <div className="max-w-5xl mx-auto">
-          <div className="card-premium animate-slide-up hover:shadow-2xl transition-all duration-500">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8 gap-4 pb-8 border-b border-border/50">
-              <div className="flex-1">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 tracking-tight leading-tight">B.Tech. Computer Science and Engineering</h3>
-                <p className="text-lg text-primary font-semibold mb-2">Lovely Professional University</p>
-                <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-lg">
-                  <span className="text-sm text-muted-foreground">CGPA:</span>
-                  <span className="text-base font-bold text-foreground">8.21</span>
+        </RevealOnScroll>
+
+        <RevealOnScroll delay={0.15}>
+          <div className="mt-16 max-w-4xl">
+            <div className="glass-card rounded-2xl p-8 lg:p-10 relative overflow-hidden">
+              {/* Timeline accent */}
+              <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/20 to-transparent" />
+              <div className="absolute left-0 top-8 w-2 h-2 rounded-full bg-primary -translate-x-[3px]" />
+              
+              <div className="pl-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground font-display tracking-tight">
+                      B.Tech. Computer Science & Engineering
+                    </h3>
+                    <p className="text-primary font-medium mt-1">Lovely Professional University</p>
+                  </div>
+                  <div className="flex items-center gap-4 flex-shrink-0">
+                    <span className="px-3 py-1 rounded-lg bg-primary/10 text-primary text-sm font-semibold">
+                      CGPA: 8.21
+                    </span>
+                    <span className="text-sm text-muted-foreground">2022 — Present</span>
+                  </div>
                 </div>
-              </div>
-              <div className="md:text-right flex-shrink-0">
-                <p className="text-muted-foreground font-medium">Sept 2022 – Present</p>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-bold text-foreground mb-5">Relevant Coursework</h4>
-              <div className="flex flex-wrap gap-3">
-                {courses.map((course, index) => (
-                  <span 
-                    key={index}
-                    className="bg-secondary/60 text-secondary-foreground text-sm px-4 py-2.5 rounded-xl font-medium border border-border/30 hover:border-primary/40 hover:bg-secondary transition-all duration-300"
-                  >
-                    {course}
-                  </span>
-                ))}
+
+                <div className="glow-line my-6" />
+
+                <div>
+                  <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">
+                    Relevant Coursework
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {courses.map((course, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-3 py-1.5 rounded-lg bg-secondary/60 text-secondary-foreground font-medium border border-border/30"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
   );
