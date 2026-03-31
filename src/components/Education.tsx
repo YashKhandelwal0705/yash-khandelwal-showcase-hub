@@ -3,11 +3,11 @@ import RevealOnScroll from './RevealOnScroll';
 const Education = () => {
   const courses = [
     "Data Structures and Algorithms",
-    "Machine Learning",
-    "Database Management",
+    "Object-Oriented Programming",
+    "Database Management Systems",
+    "Operating Systems",
+    "System Design",
     "Data Science",
-    "Object Oriented Programming",
-    "SDLC",
   ];
 
   return (

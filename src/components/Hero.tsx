@@ -57,7 +57,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0"
           >
-            Aspiring <span className="text-foreground font-medium">Data Scientist</span> &{" "}
+            Aspiring <span className="text-foreground font-medium">Software Developer</span> &{" "}
             <span className="text-foreground font-medium">ML Engineer</span> — turning complex data into intelligent, real-world solutions.
           </motion.p>
 

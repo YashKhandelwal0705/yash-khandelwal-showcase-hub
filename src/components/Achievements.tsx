@@ -1,17 +1,17 @@
 import RevealOnScroll from './RevealOnScroll';
-import { Trophy, Code } from 'lucide-react';
+import { Trophy, Code, FileText } from 'lucide-react';
 
 const Achievements = () => {
   const achievements = [
     {
-      icon: Code,
-      title: "Competitive Programming",
-      description: "Achieved 1100+ contest rating on CodeForces and solved 300+ problems across LeetCode and GeeksforGeeks.",
+      icon: FileText,
+      title: "Published Patent",
+      description: "AI/ML — Student Dropout Prediction System | Application No. 202511104223 A",
     },
     {
-      icon: Trophy,
-      title: "Technical Mastery",
-      description: "Developed proficiency across multiple programming languages and frameworks with a strong foundation in Data Structures and Algorithms.",
+      icon: Code,
+      title: "Competitive Programming",
+      description: "Achieved 1200+ contest rating on Codeforces and solved 400+ DSA problems across LeetCode, Codeforces, and GeeksforGeeks.",
     },
   ];
 

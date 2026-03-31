@@ -2,8 +2,9 @@ import RevealOnScroll from './RevealOnScroll';
 
 const Training = () => {
   const highlights = [
-    "Hands-on experience in data preprocessing, EDA, feature engineering, and predictive modeling using Python, Pandas, NumPy, and SQL",
-    "Built, evaluated, and optimized ML models (regression, classification, clustering) for practical business use cases",
+    "Authored 500+ corrective rewrites for LLM outputs, identifying hallucinations and logical inconsistencies",
+    "Analyzed model responses in evaluation pipelines, uncovering failure patterns and edge cases",
+    "Improved model accuracy through debugging, error categorization, and iterative evaluation workflows",
   ];
 
   return (
@@ -14,7 +15,7 @@ const Training = () => {
         <RevealOnScroll>
           <span className="section-label">Experience</span>
           <h2 className="section-header">
-            Training & development<span className="text-primary">.</span>
+            Work experience<span className="text-primary">.</span>
           </h2>
         </RevealOnScroll>
 
@@ -28,11 +29,11 @@ const Training = () => {
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-6">
                   <div>
                     <h3 className="text-2xl font-bold text-foreground font-display tracking-tight">
-                      Complete Machine Learning & Data Science Program
+                      AI Training & Model Evaluation Associate
                     </h3>
-                    <p className="text-primary font-medium mt-1">GeeksforGeeks</p>
+                    <p className="text-primary font-medium mt-1">Outlier (Scale AI) · Freelance</p>
                   </div>
-                  <span className="text-sm text-muted-foreground flex-shrink-0">Jun — Jul 2024</span>
+                  <span className="text-sm text-muted-foreground flex-shrink-0">Nov 2024 — Jan 2025</span>
                 </div>
 
                 <div className="glow-line my-6" />

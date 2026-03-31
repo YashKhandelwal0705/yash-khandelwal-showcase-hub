@@ -1,4 +1,4 @@
-import { ExternalLink, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import RevealOnScroll from './RevealOnScroll';
 import { motion } from 'framer-motion';
 
@@ -15,18 +15,6 @@ const Certifications = () => {
       issuer: "DeepLearning.AI",
       date: "Mar 2024",
       link: "https://coursera.org/share/94b72fc106f9af47a16b89f20fb673ed",
-    },
-    {
-      title: "Machine Learning Program",
-      issuer: "GeeksforGeeks",
-      date: "Jul 2024",
-      link: "https://www.geeksforgeeks.org/certificate/42b0605e1a7058c9022956d3e0efc42f?utm_source=socials&utm_medium=cc_link",
-    },
-    {
-      title: "Cloud Computing",
-      issuer: "NPTEL",
-      date: "Nov 2024",
-      link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS118S167020305904433055",
     },
   ];
 
