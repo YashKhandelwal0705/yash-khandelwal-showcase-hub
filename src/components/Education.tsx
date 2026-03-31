@@ -33,13 +33,13 @@ const Education = () => {
                     <h3 className="text-2xl font-bold text-foreground font-display tracking-tight">
                       B.Tech. Computer Science & Engineering
                     </h3>
-                    <p className="text-primary font-medium mt-1">Lovely Professional University</p>
+                    <p className="text-primary font-medium mt-1">Lovely Professional University, Phagwara, Punjab</p>
                   </div>
                   <div className="flex items-center gap-4 flex-shrink-0">
                     <span className="px-3 py-1 rounded-lg bg-primary/10 text-primary text-sm font-semibold">
-                      CGPA: 8.21
+                      CGPA: 8.30
                     </span>
-                    <span className="text-sm text-muted-foreground">2022 — Present</span>
+                    <span className="text-sm text-muted-foreground">Sep 2022 — Jun 2026</span>
                   </div>
                 </div>
 
