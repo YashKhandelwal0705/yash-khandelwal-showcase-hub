@@ -5,31 +5,31 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
+      title: "BlogForge — Backend Web Application",
+      subtitle: "Full-Stack Web Application",
+      description: "Designed RESTful backend services with authentication, role-based access, and scalable CRUD workflows. Multi-tier Flask web application with database-backed persistence, SMTP-based email notifications, and modular design principles.",
+      tags: ["Python", "Flask", "SQLite", "SMTP", "HTML/CSS"],
+      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+      github: "https://github.com/YashKhandelwal0705/BlogForge-BlogWebsite",
+      period: "Apr — Jun 2025",
+    },
+    {
       title: "Insurance Claim Severity Prediction",
       subtitle: "End-to-End ML Pipeline",
-      description: "Built an ML pipeline with XGBoost & Random Forest, achieving R² 0.87 through advanced feature engineering. Integrated SHAP for explainable premium adjustments and fraud risk scoring.",
-      tags: ["Python", "XGBoost", "SHAP", "Scikit-learn"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      description: "Built an end-to-end ML pipeline with modular preprocessing, model training, and evaluation components. Applied hyperparameter tuning and optimization techniques to improve model performance by 20% with a clean, reproducible, production-ready workflow.",
+      tags: ["Python", "XGBoost", "Random Forest", "Scikit-learn"],
+      image: "/lovable-uploads/d27c6502-0042-4795-adf1-a931e4ecbfb1.png",
       github: "https://github.com/YashKhandelwal0705/insurance_claim_prediction",
       period: "Apr — May 2025",
     },
     {
       title: "Real-Time Sign Language Translation",
       subtitle: "Computer Vision System",
-      description: "Real-time Sign Language Translator using YOLOv8 Nano for gesture recognition. Flask-based app with MediaPipe and OpenCV, optimized for stable GPU performance on 6GB hardware.",
+      description: "Real-time Sign Language Translator using YOLOv8 Nano for 4 gestures (A, F, L, Y). Flask-based app with MediaPipe and OpenCV for gesture recognition, with optimized training pipeline and error handling for smooth real-time feedback.",
       tags: ["YOLOv8", "Flask", "MediaPipe", "OpenCV"],
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&q=80",
+      image: "/lovable-uploads/bc67309f-cfaa-48e6-86e1-3a9d4acf17bf.png",
       github: "https://github.com/YashKhandelwal0705/Real-Time-Sign-Language-Translation",
-      period: "Nov — Dec 2024",
-    },
-    {
-      title: "BlogForge — Blog Platform",
-      subtitle: "Full-Stack Web Application",
-      description: "Fully functional blog platform with authentication, post CRUD, and contact form integration. Secure Flask backend with SQLite and SMTP email notifications.",
-      tags: ["Python", "Flask", "SQLite", "Bootstrap"],
-      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
-      github: "https://github.com/YashKhandelwal0705/BlogForge-BlogWebsite",
-      period: "2024",
+      period: "Feb — Apr 2025",
     },
   ];
 
@@ -55,7 +55,6 @@ const Projects = () => {
                 className="group glass-card rounded-2xl overflow-hidden"
               >
                 <div className="flex flex-col lg:flex-row">
-                  {/* Image */}
                   <div className="lg:w-2/5 relative overflow-hidden">
                     <div className="h-64 lg:h-full min-h-[280px]">
                       <img
@@ -67,7 +66,6 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  {/* Content */}
                   <div className="lg:w-3/5 p-8 lg:p-10 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between mb-4">
@@ -100,7 +98,7 @@ const Projects = () => {
                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border/50 text-sm font-medium text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group/btn"
                       >
                         <Github className="h-4 w-4" />
-                        View Code
+                        View on GitHub
                         <ArrowUpRight className="h-3 w-3 opacity-0 -translate-x-1 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 transition-all duration-300" />
                       </a>
                     </div>

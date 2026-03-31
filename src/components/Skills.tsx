@@ -5,19 +5,19 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Languages",
-      items: ["Java", "Python", "C++", "SQL"],
+      items: ["Python", "Java", "SQL"],
+    },
+    {
+      title: "Backend & Web",
+      items: ["Flask", "REST APIs", "HTML", "CSS", "SQLite", "MySQL", "PostgreSQL"],
     },
     {
       title: "Frameworks & Libraries",
-      items: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "OpenCV", "Flask"],
+      items: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "OpenCV"],
     },
     {
       title: "Tools & Platforms",
-      items: ["Git", "GitHub", "Tableau", "MySQL"],
-    },
-    {
-      title: "Soft Skills",
-      items: ["Leadership", "Teamwork", "Event Handling", "Problem Solving", "Time Management"],
+      items: ["Git", "GitHub", "AWS (EC2, S3, IAM)"],
     },
   ];
 
