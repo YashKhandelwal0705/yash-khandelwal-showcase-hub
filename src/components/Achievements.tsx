@@ -6,7 +6,7 @@ const Achievements = () => {
     {
       icon: FileText,
       title: "Published Patent",
-      description: "AI/ML — Student Dropout Prediction System | Application No. 202511104223 A",
+      description: "EduCare (Student Dropout Prediction System) | Application No. 202511104223 A",
     },
     {
       icon: Code,

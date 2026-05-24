@@ -8,16 +8,20 @@ const Skills = () => {
       items: ["Python", "Java", "SQL"],
     },
     {
+      title: "ML / AI",
+      items: ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "RAG", "Generative AI"],
+    },
+    {
       title: "Backend & Web",
-      items: ["Flask", "REST APIs", "HTML", "CSS", "SQLite", "MySQL", "PostgreSQL"],
+      items: ["Flask", "REST APIs", "PostgreSQL", "MySQL", "SQLite", "HTML", "CSS"],
     },
     {
       title: "Frameworks & Libraries",
-      items: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "OpenCV"],
+      items: ["Scikit-learn", "LangChain", "YOLOv8", "MediaPipe", "OpenCV", "Pandas", "NumPy", "Matplotlib"],
     },
     {
       title: "Tools & Platforms",
-      items: ["Git", "GitHub", "AWS (EC2, S3, IAM)"],
+      items: ["Git", "GitHub", "Docker", "AWS (EC2, S3, IAM)"],
     },
   ];
 

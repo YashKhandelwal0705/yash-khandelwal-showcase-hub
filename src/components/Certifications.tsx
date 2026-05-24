@@ -5,13 +5,13 @@ import { motion } from 'framer-motion';
 const Certifications = () => {
   const certifications = [
     {
-      title: "Divide & Conquer, Sorting & Searching, and Randomized Algorithms",
+      title: "Algorithms Specialization",
       issuer: "Stanford",
       date: "Nov 2023",
       link: "#",
     },
     {
-      title: "Generative AI with LLM",
+      title: "Generative AI with Large Language Models",
       issuer: "DeepLearning.AI",
       date: "Mar 2024",
       link: "https://coursera.org/share/94b72fc106f9af47a16b89f20fb673ed",

@@ -5,27 +5,27 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
+      title: "EduCare — Full-Stack AI System for Student Risk [Patent]",
+      subtitle: "Full-Stack ML & RAG System",
+      description: "Engineered a Flask + PostgreSQL REST backend with role-based access and repository architecture, achieving sub-200ms response times. Built an ensemble ML pipeline (Random Forest, Gradient Boosting, Neural Network) achieving 85% accuracy and 0.87 ROC-AUC. Implemented SHAP + LIME explainability and a LangChain RAG chatbot with Chroma for responses under 2 seconds. Dockerized deployment with Gunicorn on Railway delivering 99%+ uptime.",
+      tags: ["Python", "Flask", "PostgreSQL", "LangChain", "Chroma", "Docker", "Machine Learning"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      github: "https://github.com/YashKhandelwal0705",
+      period: "Jan — Mar 2026",
+    },
+    {
       title: "BlogForge — Backend Web Application",
       subtitle: "Full-Stack Web Application",
-      description: "Designed RESTful backend services with authentication, role-based access, and scalable CRUD workflows. Multi-tier Flask web application with database-backed persistence, SMTP-based email notifications, and modular design principles.",
+      description: "Engineered a Flask REST backend with session-based authentication and role-based access control across 25 endpoints. Built SQLite-backed CRUD with approval states, soft deletes, and pagination across publisher and admin layers. Implemented SMTP email workflows with Flask-Mailman for password recovery and post-approval notifications. Designed architecture with 4 blueprints and 3 controller modules isolating auth, publishing, and admin logic.",
       tags: ["Python", "Flask", "SQLite", "SMTP", "HTML/CSS"],
       image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
       github: "https://github.com/YashKhandelwal0705/BlogForge-BlogWebsite",
       period: "Apr — Jun 2025",
     },
     {
-      title: "Insurance Claim Severity Prediction",
-      subtitle: "End-to-End ML Pipeline",
-      description: "Built an end-to-end ML pipeline with modular preprocessing, model training, and evaluation components. Applied hyperparameter tuning and optimization techniques to improve model performance by 20% with a clean, reproducible, production-ready workflow.",
-      tags: ["Python", "XGBoost", "Random Forest", "Scikit-learn"],
-      image: "/lovable-uploads/d27c6502-0042-4795-adf1-a931e4ecbfb1.png",
-      github: "https://github.com/YashKhandelwal0705/insurance_claim_prediction",
-      period: "Apr — May 2025",
-    },
-    {
       title: "Real-Time Sign Language Translation",
       subtitle: "Computer Vision System",
-      description: "Real-time Sign Language Translator using YOLOv8 Nano for 4 gestures (A, F, L, Y). Flask-based app with MediaPipe and OpenCV for gesture recognition, with optimized training pipeline and error handling for smooth real-time feedback.",
+      description: "Developed a real-time Sign Language Translator using YOLOv8 Nano for 4 gestures (A, F, L, Y). Built a Flask webcam inference pipeline with MediaPipe and OpenCV, streaming live predictions. Hardened inference loop with boundary checks and fallback handling for no-hand and out-of-frame edge cases. Automated dataset pipeline with cropping, label normalization, and split generation for reproducible training.",
       tags: ["YOLOv8", "Flask", "MediaPipe", "OpenCV"],
       image: "/lovable-uploads/bc67309f-cfaa-48e6-86e1-3a9d4acf17bf.png",
       github: "https://github.com/YashKhandelwal0705/Real-Time-Sign-Language-Translation",
