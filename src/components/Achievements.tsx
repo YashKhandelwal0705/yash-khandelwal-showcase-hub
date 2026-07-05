@@ -11,7 +11,7 @@ const Achievements = () => {
     {
       icon: Code,
       title: "Competitive Programming",
-      description: "Achieved 1200+ contest rating on Codeforces and solved 400+ DSA problems across LeetCode, Codeforces, and GeeksforGeeks.",
+      description: "Achieved 1200+ contest rating on Codeforces and solved 600+ DSA problems across LeetCode, Codeforces, and GeeksforGeeks.",
     },
   ];
 
