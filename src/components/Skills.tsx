@@ -5,23 +5,23 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Languages",
-      items: ["Python", "Java", "SQL"],
+      items: ["Python", "Java", "SQL", "C++"],
     },
     {
-      title: "ML / AI",
-      items: ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "RAG", "Generative AI"],
+      title: "Backend & Databases",
+      items: ["Flask", "REST APIs", "PostgreSQL", "MySQL", "SQLite", "SQLAlchemy"],
     },
     {
-      title: "Backend & Web",
-      items: ["Flask", "REST APIs", "PostgreSQL", "MySQL", "SQLite", "HTML", "CSS"],
+      title: "AI / ML",
+      items: ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Generative AI", "RAG"],
     },
     {
       title: "Frameworks & Libraries",
-      items: ["Scikit-learn", "LangChain", "YOLOv8", "MediaPipe", "OpenCV", "Pandas", "NumPy", "Matplotlib"],
+      items: ["Scikit-learn", "LangChain", "Pandas", "NumPy", "OpenCV", "MediaPipe", "YOLOv8", "Matplotlib"],
     },
     {
-      title: "Tools & Platforms",
-      items: ["Git", "GitHub", "Docker", "AWS (EC2, S3, IAM)"],
+      title: "Cloud & DevOps",
+      items: ["Docker", "AWS (EC2, S3, IAM)", "Git", "GitHub"],
     },
   ];
 

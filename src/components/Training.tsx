@@ -2,9 +2,7 @@ import RevealOnScroll from './RevealOnScroll';
 
 const Training = () => {
   const highlights = [
-    "Authored 500+ corrective rewrites for LLM outputs, identifying hallucinations and logical inconsistencies",
-    "Analyzed model responses in evaluation pipelines, uncovering failure patterns and edge cases",
-    "Improved model accuracy through debugging, error categorization, and iterative evaluation workflows",
+    "Working in the Software Engineering domain with a focus on Full-Stack and Generative AI technologies",
   ];
 
   return (
@@ -29,11 +27,11 @@ const Training = () => {
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-6">
                   <div>
                     <h3 className="text-2xl font-bold text-foreground font-display tracking-tight">
-                      AI Training & Model Evaluation Associate
+                      Advanced App Engineering Associate
                     </h3>
-                    <p className="text-primary font-medium mt-1">Outlier (Scale AI) · Freelance</p>
+                    <p className="text-primary font-medium mt-1">Accenture · Software Engineering</p>
                   </div>
-                  <span className="text-sm text-muted-foreground flex-shrink-0">Nov 2024 — Jan 2025</span>
+                  <span className="text-sm text-muted-foreground flex-shrink-0">Aug 2026 — Present</span>
                 </div>
 
                 <div className="glow-line my-6" />

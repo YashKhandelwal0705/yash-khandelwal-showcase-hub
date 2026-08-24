@@ -37,7 +37,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-secondary/30"
           >
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-xs text-muted-foreground font-medium tracking-wide">Open to opportunities</span>
+            <span className="text-xs text-muted-foreground font-medium tracking-wide">Software Engineer at Accenture</span>
           </motion.div>
 
           <motion.h1
