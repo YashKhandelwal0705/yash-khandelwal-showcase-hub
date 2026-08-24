@@ -57,8 +57,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0"
           >
-            Aspiring <span className="text-foreground font-medium">Software Developer</span> &{" "}
-            <span className="text-foreground font-medium">ML Engineer</span> — turning complex data into intelligent, real-world solutions.
+            I'm Yash Khandelwal, a <span className="text-foreground font-medium">Software Engineer</span> with a strong foundation in backend development, full-stack engineering, and Generative AI. I enjoy building scalable applications and practical AI-powered systems that solve real-world problems.
           </motion.p>
 
           <motion.div
